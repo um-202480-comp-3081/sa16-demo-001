@@ -1,22 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'pages/base.html' %}
+{% load static %}
+{% block content %}
+<h1>Favorite Songs</h1>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Favorite Songs</title>
-  {% load static %}
-  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
+<ul>
+  <li><img src="{% static 'images/gummybear.jpeg' %}" alt="The Gummy Bear">The Gummy Bear Song</li>
+  <li>1944</li>
+</ul>
 
-<body>
-  <h1>Favorite Songs</h1>
-
-  <ul>
-    <li><img src="{% static 'images/gummybear.jpeg' %}" alt="The Gummy Bear">The Gummy Bear Song</li>
-    <li>1944</li>
-  </ul>
-
-  <a href="{% url 'pages:home' %}">Favorite Foods</a>
-</body>
-
-</html>
+<a href="{% url 'pages:home' %}">Favorite Foods</a>
+{% endblock %}
